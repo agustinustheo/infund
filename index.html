@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>
+            InFund - Where a start happens
+        </title>
+        <style>
+            *{
+                margin: 0;
+                overflow-x: hidden;
+            }
+            .infund-nav-logo{
+                background: black;
+                width: 50px;
+                height: 50px;
+
+                margin-left: 25px;
+
+                border-radius: 50%;
+            }
+            .infund-nav{
+                width: 100vw;
+                height: 57px;
+                
+                border-bottom: 1px solid black;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .infund-nav-item-container{
+                display: flex;
+            }
+            .infund-nav-item-container div{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .infund-nav-item-container div:nth-child(2){
+                border-right: 1px solid black;
+            }
+            .infund-button{
+                width: 120px;
+                margin: auto;
+                text-align: center;
+                padding: 20px;
+                background: dodgerblue;
+                border-radius: 15px;
+                font-size: 18pt;
+                color: white;
+            }
+            .infund-logo-text{
+                width: 120px;
+                margin: auto;
+                text-align: center;
+                background: dodgerblue;
+                font-size: 18pt;
+                color: white;
+            }
+            .infund-landing{
+                width: 100vw;
+                height: calc(100vh - 58px);
+                background: salmon;
+            }
+            .infund-landing > div > *{
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="infund-nav">
+            <div class="infund-nav-logo"></div>
+            <div class="infund-nav-item-container">
+                <div>Get the app</div>
+                <div>Sign In</div>
+                <div>Sign Up</div>
+            </div>
+        </nav>
+
+        <section class="infund-landing" style="display: flex; align-items: center;">
+            <div style="margin: auto;">
+                <div class="infund-logo-text">
+                    InFund
+                </div>
+                <div style="text-align: center">
+                    Value Proposition
+                </div>
+                <div class="infund-button">
+                    Start Now
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
