@@ -20,8 +20,11 @@
             .infund-nav{
                 width: 100vw;
                 height: 57px;
-                
-                border-bottom: 1px solid black;
+                position: fixed;
+                z-index: 10;
+
+                background: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
 
                 display: flex;
                 align-items: center;
@@ -38,30 +41,51 @@
                 border-right: 1px solid black;
             }
             .infund-button{
-                width: 120px;
+                width: 90px;
                 margin: auto;
                 text-align: center;
-                padding: 20px;
+                padding: 9px;
                 background: dodgerblue;
-                border-radius: 15px;
-                font-size: 18pt;
+                border-radius: 16px;
+                font-size: 14pt;
                 color: white;
             }
+            .infund-button:hover{
+                cursor: pointer;
+                background: #1B81E5;
+            }
             .infund-logo-text{
-                width: 120px;
+                width: 180px;
                 margin: auto;
                 text-align: center;
                 background: dodgerblue;
-                font-size: 18pt;
+                font-size: 38pt;
                 color: white;
             }
             .infund-landing{
                 width: 100vw;
-                height: calc(100vh - 58px);
-                background: salmon;
+                height: 100vh;
+
+                position: relative;
+            }
+            .infund-landing-background{
+                width: 100vw;
+                height: 100vh;
+
+                opacity: .3;
+                background-image: url("public/img/background.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
             }
             .infund-landing > div > *{
                 margin-bottom: 20px;
+            }
+            .infund-landing-desc{
+                position: absolute;
+                top: calc((100vh / 2) - (143px / 2));
+                left: calc((100vw / 2) - (120px / 2));
+                z-index: 9;
             }
         </style>
     </head>
@@ -75,18 +99,44 @@
             </div>
         </nav>
 
-        <section class="infund-landing" style="display: flex; align-items: center;">
-            <div style="margin: auto;">
+        <header class="infund-landing">
+            <div class="infund-landing-desc">
                 <div class="infund-logo-text">
                     InFund
                 </div>
                 <div style="text-align: center">
-                    Value Proposition
+                        Where a Start Happens
                 </div>
                 <div class="infund-button">
                     Start Now
                 </div>
             </div>
-        </section>
+            <div class="infund-landing-background"></div>
+        </header>
+
+        <main class="infund-landing" style="display: flex; align-items: center;">
+            <div style="margin: auto;">
+                <div style="text-align: center">
+                    Feature
+                </div>
+                <div style="text-align: center">
+                    How it Works
+                </div>
+            </div>
+        </main>
+
+        <footer class="infund-landing" style="display: flex; align-items: center;">
+            <div style="margin: auto;">
+                <div style="text-align: center">
+                    quote
+                </div>
+                <div style="text-align: center">
+                    <input type="text" placeholder="Enter email.." style="width: 250px; height: 32px; padding-left: 10px; border-radius: 10px; border: 0; outline: none;">
+                </div>
+                <div class="infund-button">
+                    Start Now
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
