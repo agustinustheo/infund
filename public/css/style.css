@@ -1,0 +1,84 @@
+
+*{
+    margin: 0;
+    overflow-x: hidden;
+}
+.infund-nav-logo{
+    background: black;
+    width: 50px;
+    height: 50px;
+
+    margin-left: 25px;
+
+    border-radius: 50%;
+}
+.infund-nav{
+    width: 100vw;
+    height: 57px;
+    position: fixed;
+    z-index: 10;
+
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.infund-nav-item-container{
+    display: flex;
+}
+.infund-nav-item-container div{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.infund-nav-item-container div:nth-child(2){
+    border-right: 1px solid black;
+}
+.infund-button{
+    width: 90px;
+    margin: auto;
+    text-align: center;
+    padding: 9px;
+    background: dodgerblue;
+    border-radius: 16px;
+    font-size: 14pt;
+    color: white;
+}
+.infund-button:hover{
+    cursor: pointer;
+    background: #1B81E5;
+}
+.infund-logo-text{
+    width: 180px;
+    margin: auto;
+    text-align: center;
+    background: dodgerblue;
+    font-size: 38pt;
+    color: white;
+}
+.infund-landing{
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+}
+.infund-landing-background{
+    width: 100vw;
+    height: 100vh;
+
+    opacity: .3;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.infund-landing > div > *{
+    margin-bottom: 20px;
+}
+.infund-landing-desc{
+    position: absolute;
+    top: calc((100vh / 2) - (143px / 2));
+    left: calc((100vw / 2) - (120px / 2));
+    z-index: 9;
+}
