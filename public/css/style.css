@@ -4,15 +4,10 @@
     overflow-x: hidden;
 }
 .infund-nav-logo{
-    background: black;
-    width: 50px;
-    height: 50px;
-
+    display: block;
     margin-left: 25px;
-
-    border-radius: 50%;
 }
-.infund-nav{
+nav.infund-nav, .infund-landing-nav{
     width: 100vw;
     height: 57px;
     position: fixed;
@@ -24,15 +19,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: all .3s ease;
+}
+.infund-nav-inlanding{
+    transform: translateY(-57px);
+    transition: all .3s ease;
+}
+.infund-landing-nav{
+    position: absolute;
+    top: 10px;
+    background: transparent;
+    transform: translateY(0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+}
+.infund-landing-nav > a > img{
+    padding-top: 5px;
 }
 .infund-nav-item-container{
     display: flex;
 }
-.infund-nav-item-container div{
+.infund-nav-item-container *{
     padding-left: 15px;
     padding-right: 15px;
 }
-.infund-nav-item-container div:nth-child(2){
+.infund-nav-item-container *:nth-child(2){
     border-right: 1px solid black;
 }
 .infund-button{
@@ -40,7 +50,7 @@
     margin: auto;
     text-align: center;
     padding: 9px;
-    background: dodgerblue;
+    background: #75c77d;
     border-radius: 16px;
     font-size: 14pt;
     color: white;
@@ -53,7 +63,7 @@
     width: 180px;
     margin: auto;
     text-align: center;
-    background: dodgerblue;
+    background: #75c77d;
     font-size: 38pt;
     color: white;
 }
@@ -81,4 +91,59 @@
     top: calc((100vh / 2) - (143px / 2));
     left: calc((100vw / 2) - (120px / 2));
     z-index: 9;
+}
+
+.infund-nav-item-container > a{
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.infund-nav-item-container > a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.infund-how-to-card{
+    margin: 10px;
+    width: 240px;
+    background: white;
+    box-shadow: 0px 0px 13px 0px rgba(17, 17, 17, .5);
+    border-radius: 6px;
+    line-height: 16pt;
+
+    padding: 15px;
+    font-size: 12pt;
+    text-align: center;
+
+    cursor: pointer;
+}
+.infund-landing-page-desc{
+    display: flex; 
+    align-items: center; 
+    padding: 20px;
+}
+.infund-landing-page-desc > div{
+    margin: auto;
+}
+.infund-landing-page-desc > div > div{
+    padding-top: 20px;
+}
+.infund-landing-page-desc > div > div > h1{
+    text-align: center;
+}
+.infund-landing-page-desc > div > div > div{
+    display: flex;
+}
+
+footer{
+    background: #282828;
+    color: white;
+    padding: 15px;
+}
+footer > div{
+    margin: auto;
+}
+footer > div > *{
+    margin: 10px;
 }
