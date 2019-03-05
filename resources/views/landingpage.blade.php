@@ -14,7 +14,7 @@
             </a>
             <div class="infund-nav-item-container">
                 <div>Get the app</div>
-                <a href="/signin">Sign In</a>
+                <a>Sign In</a>
                 <a href="/signup">Sign Up</a>
             </div>
         </nav>
@@ -26,7 +26,7 @@
                 </a>
                 <div class="infund-nav-item-container">
                     <div>Get the app</div>
-                    <a href="/signin">Sign In</a>
+                    <a class="infund-signin-form-show">Sign In</a>
                     <a href="/signup">Sign Up</a>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                 <div style="text-align: center">
                         Where a Start Happens
                 </div>
-                <div class="infund-button">
+                <div class="infund-button infund-signin-form-show">
                     Start Now
                 </div>
             </div>
@@ -131,11 +131,41 @@
                 <div style="text-align: center">
                     <input type="text" placeholder="Enter email.." style="width: 250px; height: 32px; padding-left: 10px; border-radius: 10px; border: 0; outline: none;">
                 </div>
-                <div class="infund-button">
+                <div class="infund-button infund-signin-form-show">
                     Start Now
                 </div>
             </div>
         </footer>
+
+        <style>
+            .infund-signin-form > a{
+                display: block;
+                color: black;
+                text-decoration: none;
+            }
+
+            .infund-signin-form > a:hover{
+                color: black;
+                text-decoration: underline;
+            }   
+        </style>
+
+        <form id="signInForm" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.3); z-index: 10; overflow: hidden;">
+            <div class="infund-signin-form">
+                <h1>Welcome Back!</h1>
+                <div>
+                    <label for="email">Email</label>
+                    <input class="infund-signup-textbox" type="text" placeholder="Enter your address..">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input class="infund-signup-textbox" type="password" placeholder="Enter your password..">
+                </div>
+                <input class="infund-button infund-signup-button" type="button" value="Sign In">
+                <a href="/signin">Forgot Password?</a>
+                <a href="/signup">Don't have InFund account? Sign Up</a>
+            </div>
+        </form>
     </body>
 
     <script
@@ -143,6 +173,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
     <script>
+        $('#signInForm').hide();
         var bindEvent = true;
         reachedExplanation();
         function reachedTop(){
@@ -164,5 +195,14 @@
                 }
             });
         }
+        $('.infund-signin-form-show').on('click', function(){
+            $('#signInForm').fadeIn();
+        });
+        $('#signInForm').on('click', function(e){
+            if (e.target !== this)
+                return;
+            else
+                $('#signInForm').fadeOut();
+        });
     </script>
 </html>

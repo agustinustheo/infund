@@ -56,7 +56,7 @@ nav.infund-nav, .infund-landing-nav{
 }
 .infund-button:hover{
     cursor: pointer;
-    background: #1B81E5;
+    background: #6cb773;
 }
 .infund-logo-text{
     width: 180px;
@@ -135,6 +135,73 @@ nav.infund-nav, .infund-landing-nav{
     display: flex;
 }
 
+.infund-signup-progress{
+    position: relative; 
+    height: 40px; 
+    display: flex;
+}
+.infund-signup-progress-bar{
+    width: 20%;
+    height: 10px;
+    
+    background: #e2e2e2;
+    margin: 2px;
+    margin-top: 10px;
+}
+.infund-signup-progress-number{
+    position: absolute; 
+    width: 30px; 
+    height: 30px; 
+    background: white; 
+    
+    text-align: center; 
+    line-height: 30px;
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.infund-signup-container{
+    width: 90vw; 
+    margin: auto; 
+    margin-top: 100px;
+}
+.infund-signup-container > h1{
+    text-align: center;
+}
+.infund-signup-form > *{
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+#signUpForm{
+    display: flex; 
+    width: 500%;
+    transition: all .5s ease-out;
+}
+.infund-signup-progress-bar-full{
+    width: 0%; 
+    height: 10px; 
+    background: #75c77d;
+    transition: all .2s ease-in;
+}
+.infund-signup-textbox{
+    width: 320px;
+    height: 32px;
+    background: #efefef;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border: 0;
+    border-radius: 10px;
+    outline: 0;
+}
+.infund-signup-button{
+    border: 0;
+    outline: 0;
+}
+.infund-signup-form div > label{
+    margin-right: 10px;
+}
 footer{
     background: #282828;
     color: white;
@@ -144,5 +211,23 @@ footer > div{
     margin: auto;
 }
 footer > div > *{
+    margin: 10px;
+}
+.infund-signin-form{
+    width: 350px;  
+    background: white;
+
+    position: absolute; 
+    top: calc(50% - (320px / 2)); 
+    left: calc(50% - (350px / 2)); 
+    z-index: 12;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+}
+.infund-signin-form > div{
+    margin: 10px;
+}
+.infund-signin-form > input{
     margin: 10px;
 }
