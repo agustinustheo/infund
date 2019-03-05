@@ -9,7 +9,7 @@
     <body>
         <nav class="infund-nav">
             <a href="/" class="infund-nav-logo">
-                <img src="{{ URL::asset('img/infund-header-logo.png') }}" height="42">
+                <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
             <div class="infund-nav-item-container">
                 <div>Get the app</div>
@@ -131,6 +131,14 @@
                 <input id="uploadFile" type="file" style="position: absolute; opacity: 0;">
             </form>
         </main>
+
+        <footer class="infund-signup-footer">
+            <div>
+                <div>
+                    © InFund 2019
+                </div>
+            </div>
+        </footer>
     </body>
 
     <script

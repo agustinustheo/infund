@@ -9,7 +9,7 @@
     <body>
         <nav class="infund-nav">
             <a href="/" class="infund-nav-logo">
-                <img src="{{ URL::asset('img/infund-header-logo.png') }}" height="42">
+                <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
             <div class="infund-nav-item-container">
                 <div>Get the app</div>
@@ -17,5 +17,32 @@
                 <a href="/signup">Sign Up</a>
             </div>
         </nav>
+
+        <main>
+            <form>
+                <div class="infund-signin-form infund-signin-page-form">
+                    <h1>Sign In</h1>
+                    <div>
+                        <label for="email">Email</label>
+                        <input class="infund-signup-textbox" type="text" placeholder="Enter your address..">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input class="infund-signup-textbox" type="password" placeholder="Enter your password..">
+                    </div>
+                    <input class="infund-button infund-signup-button" type="button" value="Sign In">
+                    <a href="/signin">Forgot Password?</a>
+                    <a href="/signup">Don't have InFund account? Sign Up</a>
+                </div>
+            </form>
+        </main>
+
+        <footer class="infund-signup-footer">
+            <div>
+                <div>
+                    © InFund 2019
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

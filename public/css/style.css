@@ -36,12 +36,13 @@ nav.infund-nav, .infund-landing-nav{
 }
 .infund-nav-item-container{
     display: flex;
+    align-items: center;
 }
-.infund-nav-item-container *{
+.infund-nav-item-container > *{
     padding-left: 15px;
     padding-right: 15px;
 }
-.infund-nav-item-container *:nth-child(2){
+.infund-nav-item-container > *:nth-child(2){
     border-right: 1px solid black;
 }
 .infund-button{
@@ -77,7 +78,7 @@ nav.infund-nav, .infund-landing-nav{
     height: 100vh;
 
     opacity: .3;
-    background-image: url("../img/background.jpg");
+    background-image: url("../img/web_assets/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -178,6 +179,17 @@ nav.infund-nav, .infund-landing-nav{
     width: 500%;
     transition: all .5s ease-out;
 }
+#signInForm{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 10;
+
+    width: 100vw; 
+    height: 100vh; 
+    background: rgba(0, 0, 0, 0.3); 
+    overflow: hidden;
+}
 .infund-signup-progress-bar-full{
     width: 0%; 
     height: 10px; 
@@ -225,9 +237,100 @@ footer > div > *{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1); 
     padding: 15px;
 }
+.infund-signin-page-form{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0); 
+}
 .infund-signin-form > div{
     margin: 10px;
 }
 .infund-signin-form > input{
     margin: 10px;
+}
+.infund-signin-form > a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.infund-signin-form > a:hover{
+    color: black;
+    text-decoration: underline;
+}
+#profileExpandMenu{
+    border-right: 0px solid black;
+    cursor: pointer;
+}
+.infund-expand-nav{
+    position: absolute; 
+    right: 0; 
+    top: 56px; 
+    z-index: 15;
+    
+    width: 197.5px; 
+    height: 0;
+    background: white; 
+    display: flex; 
+    flex-direction: column;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.1), 0 6px 20px -2px rgba(0, 0, 0, 0.1); 
+
+    transition: all .3s ease;
+    overflow: hidden;
+}
+.infund-expand-nav > *{
+    opacity: 0;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+.infund-expand-nav > *:hover{
+    background: #f4f4f4;
+    cursor: pointer; 
+    color: black;
+    text-decoration: underline;
+}
+#profileExpandTrigger{
+    opacity: 0;
+}
+#profileExpandTrigger:checked ~ .infund-expand-nav{
+    height: 84px;
+}
+#profileExpandTrigger:checked ~ .infund-expand-nav > a{
+    opacity: 1;
+}
+.infund-dashboard-search{
+    padding-left: 35px;
+}
+.infund-dashboard-nav > form{
+    position: relative;
+}
+.infund-dashboard-nav > form > i{
+    position: absolute; 
+    top: 8px; 
+    left: 10px;
+    z-index: 20; 
+    color: grey; 
+}
+.infund-signup-footer{
+    position: fixed; 
+    bottom: 0; 
+    
+    width: 100vw; 
+    display: flex; 
+    align-items: center;
+}
+.infund-signup-footer > div, .infund-dashboard-footer > div{
+    margin: auto;
+}
+.infund-signup-footer > div > div, .infund-dashboard-footer > div > div{
+    text-align: center;
+}
+.infund-dashboard-footer{
+    display: flex; 
+    align-items: center;
+    margin-top: 40px;
 }

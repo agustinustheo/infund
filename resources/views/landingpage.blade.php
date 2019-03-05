@@ -4,13 +4,13 @@
         <title>
             InFund - Where a start happens
         </title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     </head>
     <body>
         <nav class="infund-nav-inlanding infund-nav">
             <a href="/" class="infund-nav-logo">
-                <img src="{{ URL::asset('img/infund-header-logo.png') }}" height="42">
+                <img src="{{ URL::asset('img/web_assets/-header-logo.png') }}" height="42">
             </a>
             <div class="infund-nav-item-container">
                 <div>Get the app</div>
@@ -22,7 +22,7 @@
         <header class="infund-landing">
             <div class="infund-nav infund-landing-nav">
                 <a href="/" class="infund-nav-logo">
-                    <img src="{{ URL::asset('img/infund-header-logo.png') }}" height="42">
+                    <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
                 </a>
                 <div class="infund-nav-item-container">
                     <div>Get the app</div>
@@ -137,20 +137,7 @@
             </div>
         </footer>
 
-        <style>
-            .infund-signin-form > a{
-                display: block;
-                color: black;
-                text-decoration: none;
-            }
-
-            .infund-signin-form > a:hover{
-                color: black;
-                text-decoration: underline;
-            }   
-        </style>
-
-        <form id="signInForm" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.3); z-index: 10; overflow: hidden;">
+        <form id="signInForm">
             <div class="infund-signin-form">
                 <h1>Welcome Back!</h1>
                 <div>

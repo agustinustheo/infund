@@ -22,3 +22,16 @@ Route::get('/signin', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('/settings', function () {
+    return view('settings');
+});
+
