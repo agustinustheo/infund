@@ -4,6 +4,7 @@
         <title>
             InFund - Where a start happens
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     </head>
@@ -36,7 +37,13 @@
             </a>
         </nav>
 
-        <main style="width: 90vw; margin: auto; margin-top: 60px;">
+        <main class="infund-dashboard-main">
+            <h2>Upload Your Proposal</h2>
+            <div class="infund-dashboard-upload">
+                <div>
+                
+                </div>
+            </div>
             <h2>Based on your preferences</h2>
             <div style="display: flex">
                 <div class="infund-how-to-card">

@@ -4,13 +4,14 @@
         <title>
             InFund - Where a start happens
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     </head>
     <body>
         <nav class="infund-nav-inlanding infund-nav">
             <a href="/" class="infund-nav-logo">
-                <img src="{{ URL::asset('img/web_assets/-header-logo.png') }}" height="42">
+                <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
             <div class="infund-nav-item-container">
                 <div>Get the app</div>
@@ -149,7 +150,7 @@
                     <input class="infund-signup-textbox" type="password" placeholder="Enter your password..">
                 </div>
                 <input class="infund-button infund-signup-button" type="button" value="Sign In">
-                <a href="/signin">Forgot Password?</a>
+                <a href="/forgot">Forgot Password?</a>
                 <a href="/signup">Don't have InFund account? Sign Up</a>
             </div>
         </form>
@@ -190,6 +191,6 @@
                 return;
             else
                 $('#signInForm').fadeOut();
-        });
+        }); 
     </script>
 </html>

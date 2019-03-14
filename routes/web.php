@@ -35,3 +35,10 @@ Route::get('/settings', function () {
     return view('settings');
 });
 
+Route::get('/forgot', function () {
+    return view('forgot');
+});
+
+Route::get('/reset', function () {
+    return view('reset');
+});

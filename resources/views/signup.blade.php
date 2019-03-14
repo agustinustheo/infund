@@ -4,6 +4,7 @@
         <title>
             InFund - Where a start happens
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     </head>
     <body>
@@ -55,13 +56,13 @@
             </div>
 
             <form id="signUpForm">
-                <div class="infund-signup-form" style="width: 100%;">
+                <div class="infund-signup-form">
                     <b>What's your name?</b>
                     <span>Please enter your name</span>
                     <input class="infund-signup-textbox" type="text" placeholder="Enter your name..">
                     <input class="infund-button infund-signup-button infund-signup-next-button" type="button" value="Next">
                 </div>
-                <div class="infund-signup-form" style="width: 100%;">
+                <div class="infund-signup-form">
                     <b>What's your email address?</b>
                     <span>We will send a confirmation to your email</span>
                     <input class="infund-signup-textbox" type="text" placeholder="Enter your email..">
@@ -70,14 +71,14 @@
                         <input class="infund-button infund-signup-button infund-signup-next-button" type="button" value="Next">
                     </div>
                 </div>
-                <div class="infund-signup-form" style="width: 100%;">
+                <div class="infund-signup-form">
                     <b>What's your bank account number?</b>
                     <div>
-                        <label for="bankName">Bank</label>
+                        <label class="infund-signup-label" for="bankName">Bank</label>
                         <input class="infund-signup-textbox" type="text" placeholder="Enter your bank name..">
                     </div>
                     <div>
-                        <label for="bankNumber">Bank Number</label>
+                        <label class="infund-signup-label" for="bankNumber">Bank Number</label>
                         <input class="infund-signup-textbox" type="text" placeholder="Enter your bank number..">
                     </div>
                     <div style="display: flex;">
@@ -85,18 +86,18 @@
                         <input class="infund-button infund-signup-button infund-signup-next-button" type="button" value="Next">
                     </div>
                 </div>
-                <div class="infund-signup-form" style="width: 100%;">
+                <div class="infund-signup-form">
                     <b>Additional Information</b>
                     <div>
-                        <label for="dateOfBirth">Date of Birth</label>
+                        <label class="infund-signup-label" for="dateOfBirth">Date of Birth</label>
                         <input class="infund-signup-textbox" type="text" placeholder="dd/mm/yyyy">
                     </div>
                     <div>
-                        <label for="homeAddress">Home Address</label>
+                        <label class="infund-signup-label" for="homeAddress">Home Address</label>
                         <input class="infund-signup-textbox" type="text" placeholder="Enter your address..">
                     </div>
                     <div>
-                        <label for="businessAddress">Business Address</label>
+                        <label class="infund-signup-label" for="businessAddress">Business Address</label>
                         <input class="infund-signup-textbox" type="text" placeholder="Enter your business address..">
                     </div>
                     <div>
@@ -115,10 +116,10 @@
                         <input class="infund-button infund-signup-button infund-signup-next-button" type="button" value="Next">
                     </div>
                 </div>
-                <div class="infund-signup-form" style="width: 100%;">
+                <div class="infund-signup-form">
                     <b>Set up your password</b>
                     <div>
-                        <label for="password">Password</label>
+                        <label class="infund-signup-label" for="password">Password</label>
                         <input class="infund-signup-textbox" type="password" placeholder="Enter your password..">
                     </div>
                     <span>Upload a photo of yourself</span>

@@ -13,27 +13,19 @@
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
             <div class="infund-nav-item-container">
-                <div>Get the app</div>
-                <a href="/signin">Sign In</a>
-                <a href="/signup">Sign Up</a>
+                <a href="/signin">Back to Sign In</a>
             </div>
         </nav>
 
         <main>
             <form>
-                <div class="infund-signin-form infund-signin-page-form">
-                    <h1>Sign In</h1>
+                <div class="infund-signin-form infund-signin-page-form infund-forgot-page-form">
+                    <h1>Forgot Password</h1>
                     <div>
-                        <label for="email">Email</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your address..">
+                        <label for="email">Let us help you. Please enter your email address below.</label>
+                        <input class="infund-signup-textbox" type="text" placeholder="Enter your email..">
                     </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input class="infund-signup-textbox" type="password" placeholder="Enter your password..">
-                    </div>
-                    <input class="infund-button infund-signup-button" type="button" value="Sign In">
-                    <a href="/forgot">Forgot Password?</a>
-                    <a href="/signup">Don't have InFund account? Sign Up</a>
+                    <input class="infund-button infund-signup-button" type="button" value="Confirm">
                 </div>
             </form>
         </main>
