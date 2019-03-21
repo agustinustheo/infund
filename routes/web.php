@@ -42,3 +42,11 @@ Route::get('/forgot', function () {
 Route::get('/reset', function () {
     return view('reset');
 });
+
+Route::get('/proposal', function () {
+    return view('proposal');
+});
+
+Route::get('/upload', function () {
+    return view('uploadproposal');
+});

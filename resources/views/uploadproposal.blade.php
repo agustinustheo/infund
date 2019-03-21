@@ -13,10 +13,6 @@
             <a href="/" class="infund-nav-logo">
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
-            <form>
-                <input class="infund-signup-textbox infund-dashboard-search" type="text" placeholder="Search..">
-                <i class="fas fa-search"></i>
-            </form>
             <label for="profileExpandTrigger" class="infund-nav-item-container">
                 <div style="width: 30px; height: 30px; padding: 0; border-radius: 50%; overflow: hidden;">
                     <img src="{{ URL::asset('img/web_assets/anonymous/profile_male.jpg') }}" style="width: 30px; height: 30px;">
@@ -37,41 +33,32 @@
             </a>
         </nav>
 
-        <main class="infund-dashboard-main">
-            <h2>Upload Your Proposal</h2>
-            <label for="uploadFile" class="infund-dashboard-upload">
-                <div>
-                    <i class="fas fa-file-upload fa-5x"></i>
-                </div>
-                <input id="uploadFile" type="file" style="position: absolute; opacity: 0;">
-            </label>
-            <h2>Your Projects</h2>
-            <div class="infund-dashboard-proposals">
+        <main class="infund-dashboard-main infund-proposal-upload-main">
+            <h2>Proposal Upload</h2>
+            <div class="infund-proposal-form">
                 <div>
                     <div class="infund-proposal-card">
                         <span>
                             <h2>Title</h2>
                             <span>brief desc..</span>
                             <span>100 investor 100 views</span>
-                        </span>
-                        <span>
-
                         </span>
                     </div>
                 </div>
-            </div>
-            <h2>Top viewed proposals</h2>
-            <div class="infund-dashboard-proposals">
                 <div>
-                    <div class="infund-proposal-card">
-                        <span>
-                            <h2>Title</h2>
-                            <span>brief desc..</span>
-                            <span>100 investor 100 views</span>
-                        </span>
-                        <span>
-
-                        </span>
+                    <div id="infundProposalUploadData">
+                        <label class="infund-signup-label" for="title">Title</label>
+                        <input class="infund-signup-textbox" type="text" placeholder="Enter your title..">
+                        <label class="infund-signup-label" for="email">Author</label>
+                        <div>Max Jong</div>
+                        <label class="infund-signup-label" for="description">Description</label>
+                        <textarea class="infund-signup-textarea" type="text" placeholder="Enter your description.."></textarea>
+                        <label class="infund-signup-label" for="funds">Funds Needed</label>
+                        <input class="infund-signup-textbox" type="text" placeholder="Enter funds needed..">
+                        <div>
+                            <div class="infund-button">Cancel</div>
+                            <div class="infund-button">Confirm</div>
+                        </div>
                     </div>
                 </div>
             </div>
