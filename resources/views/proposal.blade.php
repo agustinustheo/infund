@@ -13,12 +13,7 @@
             <a href="/" class="infund-nav-logo">
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
-            <label for="profileExpandTrigger" class="infund-nav-item-container">
-                <div style="width: 30px; height: 30px; padding: 0; border-radius: 50%; overflow: hidden;">
-                    <img src="{{ URL::asset('img/web_assets/anonymous/profile_male.jpg') }}" style="width: 30px; height: 30px;">
-                </div>
-                <a id="profileExpandMenu">Agustinus Theodorus</a>
-            </label>
+            <a class="infund-backto-dashboard" href="/dashboard">Back to Dashboard</a>
         </nav>
         <input id="profileExpandTrigger" type="checkbox">
         <nav class="infund-expand-nav">
@@ -47,10 +42,10 @@
                         <label class="infund-signup-label">Author</label>
                         <div>Max Jong</div>
                         <label class="infund-signup-label">Description</label>
-                        <div style="width: 300px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque ut, consequuntur odio voluptatum pariatur culpa et eaque sed quas possimus suscipit expedita accusantium facilis error, animi ratione fuga nam dignissimos.</div>
+                        <div class="infund-signup-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque ut, consequuntur odio voluptatum pariatur culpa et eaque sed quas possimus suscipit expedita accusantium facilis error, animi ratione fuga nam dignissimos.</div>
                         <label class="infund-signup-label">Funds Needed</label>
                         <div>Rp. 15.000.000,-</div>
-                        <div>
+                        <div class="infund-signup-buttons">
                             <div class="infund-button">Cancel</div>
                             <div class="infund-button">Confirm</div>
                         </div>

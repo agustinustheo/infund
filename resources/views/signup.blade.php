@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     </head>
     <body>
-        <nav class="infund-nav">
+        <nav class="infund-nav infund-signup-nav">
             <a href="/" class="infund-nav-logo">
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
