@@ -47,74 +47,49 @@
             <div>
                 <div>
                     <h1>
-                        How it Works
-                    </h1>
-                    <div>
-                        <div class="infund-how-to-card">
-                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Register</h4>
-                            <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
-                                <i class="fas fa-pencil-alt fa-7x"></i>
-                            </div>
-                            <hr>
-                            <span style="display: block; margin-top: 20px;">
-                                Before you use our app, please register to get access to our features
-                            </span>
-                        </div>
-                        <div class="infund-how-to-card">
-                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Upload Work</h4>
-                            <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
-                                <i class="fas fa-file-upload fa-7x"></i>
-                            </div>
-                            <hr>
-                            <span style="display: block; margin-top: 20px;">
-                                Upload all of your best work in your Create page, and watch the magic happen!
-                            </span>
-                        </div>
-                        <div class="infund-how-to-card">
-                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Customize</h4>
-                            <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
-                                <i class="fas fa-paint-brush fa-7x"></i>
-                            </div>
-                            <hr>
-                            <span style="display: block; margin-top: 20px;">
-                                After uploading your portfolio, add some little touches to your profile to make it more you!
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h1>
                         Features
                     </h1>
                     <div>
                         <div class="infund-how-to-card">
-                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Register</h4>
+                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Penny for your thoughts?</h4>
                             <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
-                                <i class="fas fa-pencil-alt fa-7x"></i>
+                                <i class="fas fa-comment-dots fa-7x"></i>
                             </div>
                             <hr>
                             <span style="display: block; margin-top: 20px;">
-                                Before you use our app, please register to get access to our features
+                            Your ideas might just be what the world needs. Mega resetcorporations start from the simplest ideas. Food for thought!
                             </span>
                         </div>
                         <div class="infund-how-to-card">
-                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Upload Work</h4>
+                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Keep ‘em drafting!</h4>
                             <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
                                 <i class="fas fa-file-upload fa-7x"></i>
                             </div>
                             <hr>
                             <span style="display: block; margin-top: 20px;">
-                                Upload all of your best work in your Create page, and watch the magic happen!
+                                Form up a business proposal for your idea, so that the public can see what you are up to. Ideas need capital to get the gears spinning!
                             </span>
                         </div>
+                    </div>
+                    <div>
                         <div class="infund-how-to-card">
-                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Customize</h4>
+                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Make it rain!</h4>
                             <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
-                                <i class="fas fa-paint-brush fa-7x"></i>
+                                <i class="fas fa-money-check-alt fa-7x"></i>
                             </div>
                             <hr>
                             <span style="display: block; margin-top: 20px;">
-                                After uploading your portfolio, add some little touches to your profile to make it more you!
+                                Receive investments from the public, and turn it into your very own small empire. You gotta’ start somewhere, right?
+                            </span>
+                        </div>
+                        <div class="infund-how-to-card">
+                            <h4 style="text-align: center; margin-top: 12px; font-size: 14pt;">Give back to the public!</h4>
+                            <div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
+                                <i class="fas fa-hand-holding-usd fa-7x"></i>
+                            </div>
+                            <hr>
+                            <span style="display: block; margin-top: 20px;">
+                                Startup businesses are nice and all, but don’t forget where you start! Return some of your gleaming profit to your investors. There are still more on their way to you!
                             </span>
                         </div>
                     </div>

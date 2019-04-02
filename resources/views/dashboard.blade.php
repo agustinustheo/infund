@@ -82,7 +82,7 @@
                             <span>100 investor 100 views</span>
                         </span>
                         <span>
-
+                            <i class="fas fa-ellipsis-v"></i>
                         </span>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                             <span>100 investor 100 views</span>
                         </span>
                         <span>
-
+                            <i class="fas fa-ellipsis-v"></i>
                         </span>
                     </div>
                 </div>

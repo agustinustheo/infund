@@ -13,24 +13,7 @@
             <a href="/" class="infund-nav-logo">
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
-            <label for="profileExpandTrigger" class="infund-nav-item-container">
-                <div style="width: 30px; height: 30px; padding: 0; border-radius: 50%; overflow: hidden;">
-                    <img src="{{ URL::asset('img/web_assets/anonymous/profile_male.jpg') }}" style="width: 30px; height: 30px;">
-                </div>
-                <a id="profileExpandMenu">Agustinus Theodorus</a>
-            </label>
-        </nav>
-        <input id="profileExpandTrigger" type="checkbox">
-        <nav class="infund-expand-nav">
-            <a href="/profile">
-                Profile
-            </a>
-            <a href="/settings">
-                Settings
-            </a>
-            <a href="/">
-                Sign Out
-            </a>
+            <a class="infund-backto-dashboard" href="/dashboard">Back to Dashboard</a>
         </nav>
 
         <main class="infund-dashboard-main infund-proposal-upload-main">

@@ -15,18 +15,6 @@
             </a>
             <a class="infund-backto-dashboard" href="/dashboard">Back to Dashboard</a>
         </nav>
-        <input id="profileExpandTrigger" type="checkbox">
-        <nav class="infund-expand-nav">
-            <a href="/profile">
-                Profile
-            </a>
-            <a href="/settings">
-                Settings
-            </a>
-            <a href="/">
-                Sign Out
-            </a>
-        </nav>
 
         <main class="infund-dashboard-main infund-proposal-upload-main">
             <h2>Proposal Confirm</h2>
