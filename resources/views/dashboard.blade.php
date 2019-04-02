@@ -23,9 +23,36 @@
                 </div>
                 <a id="profileExpandMenu">Agustinus Theodorus</a>
             </label>
+            <label for="profileMobileExpandTrigger" id="profileMobileExpandBurger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
         </nav>
         <input id="profileExpandTrigger" type="checkbox">
         <nav class="infund-expand-nav">
+            <a href="/profile">
+                Profile
+            </a>
+            <a href="/settings">
+                Settings
+            </a>
+            <a href="/">
+                Sign Out
+            </a>
+        </nav>
+        <input id="profileMobileExpandTrigger" type="checkbox">
+        <nav class="infund-expand-mobile-nav">
+            <form>
+                <input class="infund-signup-textbox infund-dashboard-search" type="text" placeholder="Search..">
+                <i class="fas fa-search"></i>
+            </form>
+            <div class="infund-nav-item-container">
+                <div style="width: 30px; height: 30px; padding: 0; border-radius: 50%; overflow: hidden;">
+                    <img src="{{ URL::asset('img/web_assets/anonymous/profile_male.jpg') }}" style="width: 30px; height: 30px;">
+                </div>
+                <a>Agustinus Theodorus</a>
+            </div>
             <a href="/profile">
                 Profile
             </a>

@@ -55,7 +55,7 @@
                         <textarea class="infund-signup-textarea" type="text" placeholder="Enter your description.."></textarea>
                         <label class="infund-signup-label" for="funds">Funds Needed</label>
                         <input class="infund-signup-textbox" type="text" placeholder="Enter funds needed..">
-                        <div>
+                        <div class="infund-signup-buttons">
                             <div class="infund-button">Cancel</div>
                             <div class="infund-button">Confirm</div>
                         </div>

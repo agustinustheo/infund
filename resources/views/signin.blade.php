@@ -13,7 +13,6 @@
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
             <div class="infund-nav-item-container">
-                <div>Get the app</div>
                 <a href="/signin">Sign In</a>
                 <a href="/signup">Sign Up</a>
             </div>

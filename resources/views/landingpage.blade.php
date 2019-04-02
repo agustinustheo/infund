@@ -14,7 +14,6 @@
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
             <div class="infund-nav-item-container">
-                <div>Get the app</div>
                 <a>Sign In</a>
                 <a href="/signup">Sign Up</a>
             </div>
@@ -26,7 +25,6 @@
                     <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
                 </a>
                 <div class="infund-nav-item-container">
-                    <div>Get the app</div>
                     <a class="infund-signin-form-show">Sign In</a>
                     <a href="/signup">Sign Up</a>
                 </div>
