@@ -99,6 +99,47 @@
                         <span>
                             <i class="fas fa-ellipsis-v"></i>
                         </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a></a>
+                            <a></a>
+                            <a></a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a></a>
+                            <a></a>
+                            <a></a>
+                        </div>
                     </div>
                 </div>
             </div>
