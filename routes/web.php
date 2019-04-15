@@ -15,26 +15,6 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
-Route::get('/signin', function () {
-    return view('signin');
-});
-
-// Route::get('/signup', function () {
-//     return view('signup');
-// });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::get('/profile', function () {
-    return view('profile');
-});
-
-Route::get('/settings', function () {
-    return view('settings');
-});
-
 Route::get('/forgot', function () {
     return view('forgot');
 });
@@ -43,27 +23,19 @@ Route::get('/reset', function () {
     return view('reset');
 });
 
-Route::get('/proposal', function () {
-    return view('proposal');
-});
-
-Route::get('/upload', function () {
-    return view('uploadproposal');
-});
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 
 // Authentication Routes...
-Route::get('login', [
+Route::get('signin', [
     'as' => 'login',
     'uses' => 'Auth\LoginController@showLoginForm'
   ]);
-  Route::post('login', [
+  Route::post('signin', [
     'as' => '',
     'uses' => 'Auth\LoginController@login'
   ]);
-  Route::post('logout', [
+  Route::get('logout', [
     'as' => 'logout',
     'uses' => 'Auth\LoginController@logout'
   ]);
@@ -95,3 +67,24 @@ Route::get('login', [
     'as' => '',
     'uses' => 'Auth\RegisterController@register'
   ]);
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    });
+    
+    Route::get('/profile', function () {
+        return view('profile');
+    });
+    
+    Route::get('/settings', function () {
+        return view('settings');
+    });
+
+    Route::get('/proposal', function () {
+        return view('proposal');
+    });
+
+    Route::get('/upload', function () {
+        return view('uploadproposal');
+    });
+});

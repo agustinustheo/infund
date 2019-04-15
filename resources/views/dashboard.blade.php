@@ -37,7 +37,7 @@
             <a href="/settings">
                 Settings
             </a>
-            <a href="/">
+            <a href="{{url('logout')}}">
                 Sign Out
             </a>
         </nav>
