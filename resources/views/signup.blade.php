@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <form id="signUpForm" method="POST" action="{{url('/signup')}}">
+            <form id="signUpForm" method="POST" action="{{url('/signup')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="infund-signup-form">
                     <b>What's your name?</b>

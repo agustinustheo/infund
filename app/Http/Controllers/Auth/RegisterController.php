@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class RegisterController extends Controller
 {
@@ -57,7 +58,12 @@ class RegisterController extends Controller
         $user->business_address = $request->business_address;
         $user->account_type = $request->accountType;
         $user->password = bcrypt($request->password);
-        $user->profile_picture = "lu'l";
+        if(Input::hasFile('profile_picture')){
+            $file = Input::file('profile_picture');
+            $filename = str_random(5)."_".$user->name.".".$file->getClientOriginalExtension();
+            $file->move('img/profile_pictures', $filename);
+            $user->profile_picture = $filename;
+        }
         $user->save();
         return redirect("/");
     }
