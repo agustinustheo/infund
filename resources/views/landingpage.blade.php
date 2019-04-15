@@ -25,8 +25,8 @@
                     <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
                 </a>
                 <div class="infund-nav-item-container">
-                    <a class="infund-signin-form-show">Sign In</a>
-                    <a href="/signup">Sign Up</a>
+                    <a class="infund-signin-form-show" href="{{url('signin')}}">Sign In</a>
+                    <a href="{{url('signup')}}">Sign Up</a>
                 </div>
             </div>
             <div class="infund-landing-desc">
@@ -123,8 +123,8 @@
                     <input class="infund-signup-textbox" type="password" placeholder="Enter your password..">
                 </div>
                 <input class="infund-button infund-signup-button" type="button" value="Sign In">
-                <a href="/forgot">Forgot Password?</a>
-                <a href="/signup">Don't have InFund account? Sign Up</a>
+                <a href="{{url('forgot')}}">Forgot Password?</a>
+                <a href="{{url('signup')}}">Don't have InFund account? Sign Up</a>
             </div>
         </form>
     </body>

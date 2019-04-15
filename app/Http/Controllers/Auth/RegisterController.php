@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -40,6 +41,26 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function showRegistrationForm(){
+        return view('signup');
+    }
+
+    public function register(Request $request){
+        //dd($request->accountType);
+        $user = new User;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->bank_name = $request->bank_name;
+        $user->bank_account_number = $request->bank_account_number;
+        $user->dob = $request->dob;
+        $user->home_address = $request->home_address;
+        $user->business_address = $request->business_address;
+        $user->account_type = $request->accountType;
+        $user->password = bcrypt($request->password);
+        $user->profile_picture = "lu'l";
+        $user->save();
+        return redirect("/");
+    }
     /**
      * Get a validator for an incoming registration request.
      *

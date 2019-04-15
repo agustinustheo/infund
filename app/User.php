@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'bank_name', 'bank_account_number','dob','home_address','business_address','account_type','password','profile_picture',
     ];
 
     /**
@@ -25,15 +25,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
+        'password', 'remember_token', 'bank_name', 'bank_account_number',
     ];
 }

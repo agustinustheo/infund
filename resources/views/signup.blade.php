@@ -13,8 +13,8 @@
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
             <div class="infund-nav-item-container">
-                <a href="/signin">Sign In</a>
-                <a href="/signup">Sign Up</a>
+                <a href="{{url('/signin')}}">Sign In</a>
+                <a href="{{url('/signup')}}">Sign Up</a>
             </div>
         </nav>
 
@@ -54,17 +54,18 @@
                 </div>
             </div>
 
-            <form id="signUpForm">
+            <form id="signUpForm" method="POST" action="{{url('/signup')}}">
+                @csrf
                 <div class="infund-signup-form">
                     <b>What's your name?</b>
                     <span>Please enter your name</span>
-                    <input class="infund-signup-textbox" type="text" placeholder="Enter your name..">
+                    <input class="infund-signup-textbox" type="text" placeholder="Enter your name.." name="name">
                     <input class="infund-button infund-signup-button infund-signup-next-button" type="button" value="Next">
                 </div>
                 <div class="infund-signup-form">
                     <b>What's your email address?</b>
                     <span>We will send a confirmation to your email</span>
-                    <input class="infund-signup-textbox" type="text" placeholder="Enter your email..">
+                    <input class="infund-signup-textbox" type="text" placeholder="Enter your email.." name="email">
                     <div style="display: flex;">
                         <input class="infund-button infund-signup-button infund-signup-back-button" type="button" value="Back">
                         <input class="infund-button infund-signup-button infund-signup-next-button" type="button" value="Next">
@@ -74,11 +75,11 @@
                     <b>What's your bank account number?</b>
                     <div>
                         <label class="infund-signup-label" for="bankName">Bank</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your bank name..">
+                        <input class="infund-signup-textbox" type="text" placeholder="Enter your bank name.." name="bank_name">
                     </div>
                     <div>
                         <label class="infund-signup-label" for="bankNumber">Bank Number</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your bank number..">
+                        <input class="infund-signup-textbox" type="text" placeholder="Enter your bank number.." name="bank_account_number">
                     </div>
                     <div style="display: flex;">
                         <input class="infund-button infund-signup-button infund-signup-back-button" type="button" value="Back">
@@ -89,24 +90,24 @@
                     <b>Additional Information</b>
                     <div>
                         <label class="infund-signup-label" for="dateOfBirth">Date of Birth</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="dd/mm/yyyy">
+                        <input class="infund-signup-textbox" type="text" placeholder="dd/mm/yyyy" name="dob">
                     </div>
                     <div>
                         <label class="infund-signup-label" for="homeAddress">Home Address</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your address..">
+                        <input class="infund-signup-textbox" type="text" placeholder="Enter your address.." name="home_address">
                     </div>
                     <div>
                         <label class="infund-signup-label" for="businessAddress">Business Address</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your business address..">
+                        <input class="infund-signup-textbox" type="text" placeholder="Enter your business address.." name="business_address">
                     </div>
                     <div>
                         <label>Account Type</label>
                         <label for="investorsRadio">
-                            <input type="radio" name="accountType">
+                            <input type="radio" name="accountType" value="investors">
                             Investors
                         </label>
                         <label for="startersRadio">
-                            <input type="radio" name="accountType">
+                            <input type="radio" name="accountType" value="starters">
                             Starters
                         </label>
                     </div>
@@ -119,16 +120,16 @@
                     <b>Set up your password</b>
                     <div>
                         <label class="infund-signup-label" for="password">Password</label>
-                        <input class="infund-signup-textbox" type="password" placeholder="Enter your password..">
+                        <input class="infund-signup-textbox" type="password" placeholder="Enter your password.." name="password">
                     </div>
                     <span>Upload a photo of yourself</span>
                     <label for="uploadFile">Click me to choose a file</label>
                     <div style="display: flex;">
                         <input class="infund-button infund-signup-button infund-signup-back-button" type="button" value="Back">
-                        <input class="infund-button infund-signup-button" type="button" value="Finish">
+                        <input class="infund-button infund-signup-button" type="submit" value="Finish">
                     </div>
                 </div>
-                <input id="uploadFile" type="file" style="position: absolute; opacity: 0;">
+                <input id="uploadFile" type="file" style="position: absolute; opacity: 0;" name="profile_picture">
             </form>
         </main>
 
