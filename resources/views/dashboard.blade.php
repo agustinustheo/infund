@@ -19,9 +19,9 @@
             </form>
             <label for="profileExpandTrigger" class="infund-nav-item-container">
                 <div style="width: 30px; height: 30px; padding: 0; border-radius: 50%; overflow: hidden;">
-                    <img src="{{ URL::asset('img/web_assets/anonymous/profile_male.jpg') }}" style="width: 30px; height: 30px;">
+                    <img src="{{ URL::asset('img/profile_pictures/'.Auth::user()->profile_picture )}}" style="width: 30px; height: 30px;">
                 </div>
-                <a id="profileExpandMenu">Agustinus Theodorus</a>
+                <a id="profileExpandMenu">{{Auth::user()->name}}</a>
             </label>
             <label for="profileMobileExpandTrigger" id="profileMobileExpandBurger">
                 <div></div>
@@ -31,10 +31,10 @@
         </nav>
         <input id="profileExpandTrigger" type="checkbox">
         <nav class="infund-expand-nav">
-            <a href="/profile">
+            <a href="{{url('profile')}}">
                 Profile
             </a>
-            <a href="/settings">
+            <a href="{{url('settings')}}">
                 Settings
             </a>
             <a href="{{url('logout')}}">
@@ -51,7 +51,7 @@
                 <div style="width: 30px; height: 30px; padding: 0; border-radius: 50%; overflow: hidden;">
                     <img src="{{ URL::asset('img/web_assets/anonymous/profile_male.jpg') }}" style="width: 30px; height: 30px;">
                 </div>
-                <a>Agustinus Theodorus</a>
+                <a></a>
             </div>
             <a href="/profile">
                 Profile

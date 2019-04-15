@@ -14,8 +14,12 @@
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
             <div class="infund-nav-item-container">
-                <a>Sign In</a>
-                <a href="/signup">Sign Up</a>
+                @if (Auth::check())
+                    <a href="{{url('logout')}}">Logout</a>
+                @else
+                    <a href="{{url('signin')}}">Sign In</a>
+                    <a href="{{url('signup')}}">Sign Up</a>
+                @endif
             </div>
         </nav>
 
@@ -25,8 +29,12 @@
                     <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
                 </a>
                 <div class="infund-nav-item-container">
-                    <a class="infund-signin-form-show" href="{{url('signin')}}">Sign In</a>
-                    <a href="{{url('signup')}}">Sign Up</a>
+                    @if (Auth::check())
+                        <a href="{{url('logout')}}">Logout</a>
+                    @else
+                        <a class="infund-signin-form-show" href="{{url('signin')}}">Sign In</a>
+                        <a href="{{url('signup')}}">Sign Up</a>
+                    @endif
                 </div>
             </div>
             <div class="infund-landing-desc">
@@ -36,9 +44,11 @@
                 <div style="text-align: center">
                         Where a Start Happens
                 </div>
-                <div class="infund-button infund-signin-form-show">
-                    Start Now
-                </div>
+                @if (!Auth::check())
+                    <div class="infund-button infund-signin-form-show">
+                        Start Now
+                    </div>
+                @endif
             </div>
             <div class="infund-landing-background"></div>
         </header>
@@ -111,18 +121,19 @@
             </div>
         </footer>
 
-        <form id="signInForm">
+        <form id="signInForm" method="POST" action="{{ route('login') }}">
+            @csrf
             <div class="infund-signin-form">
                 <h1>Welcome Back!</h1>
                 <div>
                     <label for="email">Email</label>
-                    <input class="infund-signup-textbox" type="text" placeholder="Enter your address..">
+                    <input class="infund-signup-textbox" type="text" placeholder="Enter your address.." name="email">
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input class="infund-signup-textbox" type="password" placeholder="Enter your password..">
+                    <input class="infund-signup-textbox" type="password" placeholder="Enter your password.." name="password">
                 </div>
-                <input class="infund-button infund-signup-button" type="button" value="Sign In">
+                <input class="infund-button infund-signup-button" type="submit" value="Sign In">
                 <a href="{{url('forgot')}}">Forgot Password?</a>
                 <a href="{{url('signup')}}">Don't have InFund account? Sign Up</a>
             </div>

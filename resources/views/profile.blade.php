@@ -18,9 +18,9 @@
         <main>
             <div class="infund-profile-home">
                 <div class="infund-profile">
-                    <img src="{{ URL::asset('img/web_assets/anonymous/profile_male.jpg') }}">
+                    <img src="{{ URL::asset('img/profile_pictures/'.Auth::user()->profile_picture )}}">
                 </div>
-                <h1>Agustinus Theodorus</h1>
+                <h1>{{Auth::user()->name}}</h1>
             </div>
 
             <div class="infund-profile-view" style="min-height: calc(100vh - 390px); display: none;">
