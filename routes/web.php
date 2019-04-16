@@ -19,14 +19,14 @@ Route::get('/forgot', function () {
     return view('forgot');
 });
 
-Route::get('/reset', function () {
-    return view('reset');
+Route::get('/viewall', function () {
+    return view('viewall');
 });
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
-// Authentication Routes...
+// Authentication Routes
 Route::get('signin', [
     'as' => 'login',
     'uses' => 'Auth\LoginController@showLoginForm'
@@ -40,25 +40,25 @@ Route::get('signin', [
     'uses' => 'Auth\LoginController@logout'
   ]);
   
-  // Password Reset Routes...
-  Route::post('password/email', [
-    'as' => 'password.email',
-    'uses' => 'Auth\ForgotPasswordController@sendResetLinkEmail'
-  ]);
-  Route::get('password/reset', [ 
-    'as' => 'password.request',
-    'uses' => 'Auth\ForgotPasswordController@showLinkRequestForm'
-  ]);
-  Route::post('password/reset', [
-    'as' => 'password.update',
-    'uses' => 'Auth\ResetPasswordController@reset'
-  ]);
-  Route::get('password/reset/{token}', [
-    'as' => 'password.reset',
-    'uses' => 'Auth\ResetPasswordController@showResetForm'
-  ]);
+  // Password Reset Routes
+//   Route::post('password/email', [
+//     'as' => 'password.email',
+//     'uses' => 'Auth\ForgotPasswordController@sendResetLinkEmail'
+//   ]);
+//   Route::get('password/reset', [ 
+//     'as' => 'password.request',
+//     'uses' => 'Auth\ForgotPasswordController@showLinkRequestForm'
+//   ]);
+//   Route::post('password/reset', [
+//     'as' => 'password.update',
+//     'uses' => 'Auth\ResetPasswordController@reset'
+//   ]);
+//   Route::get('password/reset/{token}', [
+//     'as' => 'password.reset',
+//     'uses' => 'Auth\ResetPasswordController@showResetForm'
+//   ]);
   
-  // Registration Routes...
+  // Registration Routes
   Route::get('signup', [
     'as' => 'register',
     'uses' => 'Auth\RegisterController@showRegistrationForm'
@@ -67,6 +67,7 @@ Route::get('signin', [
     'as' => '',
     'uses' => 'Auth\RegisterController@register'
   ]);
+
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/dashboard', function () {
         return view('dashboard');
@@ -86,5 +87,9 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::get('/upload', function () {
         return view('uploadproposal');
+    });
+
+    Route::get('/reset', function () {
+        return view('reset');
     });
 });

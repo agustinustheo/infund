@@ -80,6 +80,10 @@ nav.infund-nav, .infund-landing-nav{
     font-size: 14pt;
     color: white;
 }
+.infund-button>a{
+    text-decoration: none;
+    color: white;
+}
 .infund-button:hover{
     cursor: pointer;
     background: #6cb773;
@@ -496,6 +500,21 @@ footer > div > *{
     top: calc((100% / 2) - (110px / 2));
     left: calc((100% / 2) - (150px / 2));
 }
+.infund-dashboard-proposals > div > div.infund-proposal-card > span:nth-child(2),
+.infund-profile-proposals > div > div.infund-proposal-card > span:nth-child(2){
+    cursor: pointer;
+}
+.infund-dashboard-proposals > div > div.infund-proposal-card > span:nth-child(2) ~ div.infund-proposal-hover-options,
+.infund-profile-proposals > div > div.infund-proposal-card > span:nth-child(2) ~ div.infund-proposal-hover-options{
+    display: none;
+}
+.infund-dashboard-proposals > div > div.infund-proposal-card > span:hover:nth-child(2) ~ div.infund-proposal-hover-options,
+.infund-profile-proposals > div > div.infund-proposal-card > span:hover:nth-child(2) ~ div.infund-proposal-hover-options,
+.infund-dashboard-proposals > div > div.infund-proposal-card > span:nth-child(2) ~ div.infund-proposal-hover-options:hover,
+.infund-profile-proposals > div > div.infund-proposal-card > span:nth-child(2) ~ div.infund-proposal-hover-options:hover{
+    display: flex;
+    flex-direction: column;
+}
 .infund-dashboard-upload > div > i::after{
     content: "Make Ideas Happen";
     position: absolute;
@@ -546,6 +565,9 @@ footer > div > *{
       display: grid;
       grid-template-rows: auto auto auto;
       overflow: hidden;
+  }
+  div.infund-profile-proposals-container.infund-viewall-proposal{
+      margin-top: 70px;
   }
   .infund-proposal-card > span:nth-child(2){
       width: 20px;
@@ -672,6 +694,48 @@ footer > div > *{
     height: 115px;
     border-radius: 50%;
     overflow: hidden;
+    position: relative;
+}
+.infund-profile-home-settings{
+    position: relative;
+}
+.infund-profile-home-settings > h1{
+    position: relative;
+    cursor: pointer;
+    z-index: 7;
+}
+.infund-profile-home-settings > div:nth-child(1){
+    position: relative;
+    cursor: pointer;
+    z-index: 8;
+}
+.infund-profile-settings > .infund-profile > div{
+    z-index: 9;
+}
+.infund-profile-home-settings > .infund-profile > div,
+.infund-profile-home-settings > div:nth-child(3){
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+
+    background: rgba(255, 255, 255, 0);
+    opacity: 0;
+
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.infund-profile-home-settings > .infund-profile > div > i{
+    color: black;
+    font-size: 45pt;
+    margin-top: calc((115px / 2) - (45pt / 2));
+}
+.infund-profile-home-settings > .infund-profile:hover > div,
+.infund-profile-home-settings > div:nth-child(3):hover,
+.infund-profile-home-settings > h1:hover ~ div{
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
 }
 .infund-profile-home > *{
     margin: auto;
@@ -713,9 +777,6 @@ footer > div > *{
     .infund-profile-form > div:nth-child(1){
         flex-direction: column;
     }
-    #infundProfileAccount > input{
-        display: none;
-    }
     .infund-profile-form{
         grid-template-columns: 30% 70%;
     }
@@ -739,6 +800,32 @@ span#addMorePreferences{
     padding: 5px;
     margin: 4px;
     cursor: default;
+}
+div#uploadModal{
+    width: 100vw; 
+    height: 100%; 
+    background: rgba(255, 255, 255, 0.5);
+
+    position: fixed;
+    top: 0; 
+    left: 0;  
+    z-index: 11; 
+    display: none;
+}
+div#uploadModal > form{
+    width: 260px;
+    padding: 20px;
+    padding-top: 10px;
+    margin: auto;
+    margin-top: calc((100vh / 2) - (156px / 2));
+    background: white;
+    border-top: 8px solid rgb(5, 175, 5);
+    border-radius: 15px;
+    box-shadow: 6px 6px 52px -1px rgba(0,0,0,0.3);
+    display: none;
+}
+div#uploadModal > form > *{
+    margin-top: 10px;
 }
 span#addMorePreferences > div:nth-child(1){
     width: 20px;
@@ -823,13 +910,22 @@ nav.infund-landing-scroll-nav.infund-nav > .infund-nav-item-container > *:nth-la
     border-right: 1px solid black;
 }
 .infund-proposal-hover-options{
-    display: flex;
-    flex-direction: column;
+    margin-top: 23px;
+    padding-top: 7px;
+    transition: all .5s ease
 }
 .infund-proposal-hover-options > a{
-    width: 100%;
+    width: 90%;
     height: 25px;
     text-align: center;
+    
+    margin: auto;
+    margin-top: 1px;
+    background: rgba(7, 206, 36, 0.7);
+
+    font-size: 10pt;
+    line-height: 25px;
+    color: white;
 }
 @media screen and (min-width: 576px){
     #profileMobileExpandBurger{

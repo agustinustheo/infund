@@ -49,9 +49,9 @@
             </form>
             <div class="infund-nav-item-container">
                 <div style="width: 30px; height: 30px; padding: 0; border-radius: 50%; overflow: hidden;">
-                    <img src="{{ URL::asset('img/web_assets/anonymous/profile_male.jpg') }}" style="width: 30px; height: 30px;">
+                    <img src="{{ URL::asset('img/profile_pictures/'.Auth::user()->profile_picture )}}" style="width: 30px; height: 30px;">
                 </div>
-                <a></a>
+                <a>{{Auth::user()->name}}</a>
             </div>
             <a href="/profile">
                 Profile
@@ -84,6 +84,17 @@
                         <span>
                             <i class="fas fa-ellipsis-v"></i>
                         </span>
+                         <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,7 +110,7 @@
                         <span>
                             <i class="fas fa-ellipsis-v"></i>
                         </span>
-                        <div class="infund-proposal-hover-options">
+                         <div class="infund-proposal-hover-options">
                             <a>
                                 View
                             </a>
@@ -120,10 +131,16 @@
                         <span>
                             <i class="fas fa-ellipsis-v"></i>
                         </span>
-                        <div class="infund-proposal-hover-options">
-                            <a></a>
-                            <a></a>
-                            <a></a>
+                         <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
                         </div>
                     </div>
                     <div class="infund-proposal-card">
@@ -135,10 +152,16 @@
                         <span>
                             <i class="fas fa-ellipsis-v"></i>
                         </span>
-                        <div class="infund-proposal-hover-options">
-                            <a></a>
-                            <a></a>
-                            <a></a>
+                         <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
                         </div>
                     </div>
                 </div>

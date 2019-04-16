@@ -48,6 +48,10 @@
                     <div class="infund-button infund-signin-form-show">
                         Start Now
                     </div>
+                @else 
+                    <div class="infund-button">
+                        <a href="{{url('dashboard')}}">Dashboard</a>
+                    </div>
                 @endif
             </div>
             <div class="infund-landing-background"></div>
