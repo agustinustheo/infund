@@ -21,11 +21,6 @@
             <div class="infund-proposal-form">
                 <div>
                     <div class="infund-proposal-card">
-                        <span>
-                            <h2>Title</h2>
-                            <span>brief desc..</span>
-                            <span>100 investor 100 views</span>
-                        </span>
                     </div>
                 </div>
                 <div>

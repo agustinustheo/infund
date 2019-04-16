@@ -50,3 +50,7 @@ Route::get('/proposal', function () {
 Route::get('/upload', function () {
     return view('uploadproposal');
 });
+
+Route::get('/viewall', function () {
+    return view('viewall');
+});

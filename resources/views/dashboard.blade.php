@@ -84,6 +84,17 @@
                         <span>
                             <i class="fas fa-ellipsis-v"></i>
                         </span>
+                         <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,7 +110,7 @@
                         <span>
                             <i class="fas fa-ellipsis-v"></i>
                         </span>
-                        <div class="infund-proposal-hover-options">
+                         <div class="infund-proposal-hover-options">
                             <a>
                                 View
                             </a>
@@ -120,10 +131,16 @@
                         <span>
                             <i class="fas fa-ellipsis-v"></i>
                         </span>
-                        <div class="infund-proposal-hover-options">
-                            <a></a>
-                            <a></a>
-                            <a></a>
+                         <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
                         </div>
                     </div>
                     <div class="infund-proposal-card">
@@ -135,10 +152,16 @@
                         <span>
                             <i class="fas fa-ellipsis-v"></i>
                         </span>
-                        <div class="infund-proposal-hover-options">
-                            <a></a>
-                            <a></a>
-                            <a></a>
+                         <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
                         </div>
                     </div>
                 </div>
