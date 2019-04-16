@@ -16,107 +16,294 @@
             <a class="infund-backto-dashboard" href="/dashboard">Back to Dashboard</a>
         </nav>
 
-        <main>
+        <main class="infund-viewall-proposal-container">
             <div class="infund-profile-proposals-container infund-viewall-proposal">
                 <h2>Most Viewed Proposals</h2>
                 <hr>
-                <div class="infund-profile-proposals">
-                    <div>
-                        <div class="infund-proposal-card">
-                            <span>
-                                <h2>Title</h2>
-                                <span>brief desc..</span>
-                                <span>100 investor 100 views</span>
-                            </span>
-                            <span>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </span>
-                            <div class="infund-proposal-hover-options">
-                                <a>
-                                    View
-                                </a>
-                                <a>
-                                    Donate
-                                </a>
-                                <a>
-                                    Blabla
-                                </a>
-                            </div>
+                <div class="infund-proposal-masonry">
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
                         </div>
-                        <div class="infund-proposal-card">
-                            <span>
-                                <h2>Title</h2>
-                                <span>brief desc..</span>
-                                <span>100 investor 100 views</span>
-                            </span>
-                            <span>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </span>
-                            <div class="infund-proposal-hover-options">
-                                <a>
-                                    View
-                                </a>
-                                <a>
-                                    Donate
-                                </a>
-                                <a>
-                                    Blabla
-                                </a>
-                            </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
                         </div>
-                        <div class="infund-proposal-card">
-                            <span>
-                                <h2>Title</h2>
-                                <span>brief desc..</span>
-                                <span>100 investor 100 views</span>
-                            </span>
-                            <span>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </span>
-                            <div class="infund-proposal-hover-options">
-                                <a>
-                                    View
-                                </a>
-                                <a>
-                                    Donate
-                                </a>
-                                <a>
-                                    Blabla
-                                </a>
-                            </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
                         </div>
-                        <div class="infund-proposal-card">
-                            <span>
-                                <h2>Title</h2>
-                                <span>brief desc..</span>
-                                <span>100 investor 100 views</span>
-                            </span>
-                            <span>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </span>
-                            <div class="infund-proposal-hover-options">
-                                <a>
-                                    View
-                                </a>
-                                <a>
-                                    Donate
-                                </a>
-                                <a>
-                                    Blabla
-                                </a>
-                            </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
+                        </div>
+                    </div>
+                    <div class="infund-proposal-card infund-viewall-card">
+                        <span>
+                            <h2>Title</h2>
+                            <span>brief desc..</span>
+                            <span>100 investor 100 views</span>
+                        </span>
+                        <span>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span>
+                        <div class="infund-proposal-hover-options">
+                            <a>
+                                View
+                            </a>
+                            <a>
+                                Donate
+                            </a>
+                            <a>
+                                Blabla
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+            <footer class="infund-viewall-footer">
+                <div>
+                    <div>
+                        © InFund 2019
+                    </div>
+                </div>
+            </footer>
         </main>
 
-        <footer class="infund-dashboard-footer infund-signup-footer">
-            <div>
-                <div>
-                    © InFund 2019
-                </div>
-            </div>
-        </footer>
     </body>
 </html>
