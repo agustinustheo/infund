@@ -5,6 +5,7 @@
             InFund - Where a start happens
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
     </head>
     <body>
