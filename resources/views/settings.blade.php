@@ -6,6 +6,7 @@
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     </head>
     <body>
@@ -19,12 +20,12 @@
         <main>
             <div class="infund-profile-home infund-profile-home-settings">
                 <div class="infund-profile infund-profile-settings">
-                    <img src="{{ URL::asset('img/web_assets/anonymous/profile_male.jpg') }}">
+                    <img src="{{ URL::asset('img/profile_pictures/'.Auth::user()->profile_picture )}}">
                     <div id="profilePicChange" >
                         <i class="fas fa-camera"></i>
                     </div>
                 </div>
-                <h1>Agustinus Theodorus</h1>
+                <h1>{{Auth::user()->name}}</h1>
                 <div id="homePicChange"></div>
             </div>
 
@@ -39,28 +40,34 @@
                 <div>
                     <div id="infundProfileAccount">
                         <label class="infund-signup-label" for="fullName">Name</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your name..">
+                        <input class="infund-signup-textbox" type="text" value="{{Auth::user()->name}}">
                         <label class="infund-signup-label" for="email">Email</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your email..">
+                        <input class="infund-signup-textbox" type="text" value="{{Auth::user()->email}}">
                         <label class="infund-signup-label" for="bankName">Bank</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your bank name..">
+                        <input class="infund-signup-textbox" type="text" value="{{Auth::user()->bank_name}}">
                         <label class="infund-signup-label" for="bankNumber">Bank Number</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your bank number..">
+                        <input class="infund-signup-textbox" type="text" value="{{Auth::user()->bank_account_number}}">
                         <label class="infund-signup-label" for="dateOfBirth">Date of Birth</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="dd/mm/yyyy">
+                        <input class="infund-signup-textbox" type="text" value="{{Auth::user()->dob}}">
                         <label class="infund-signup-label" for="homeAddress">Home Address</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your address..">
+                        <input class="infund-signup-textbox" type="text" value="{{Auth::user()->home_address}}">
                         <label class="infund-signup-label" for="businessAddress">Business Address</label>
-                        <input class="infund-signup-textbox" type="text" placeholder="Enter your business address..">
+                        <input class="infund-signup-textbox" type="text" value="{{Auth::user()->business_address}}">
                         <div>
                             <label>Account Type</label>
                             <label for="investorsRadio">
-                                <input type="radio" name="accountType">
-                                Investors
+                                @if (Auth::user()->business_address == "investors")
+                                    <input type="radio" name="accountType"> Investors
+                                @else
+                                    <input type="radio" name="accountType" checked> Investors
+                                @endif
                             </label>
                             <label for="startersRadio">
-                                <input type="radio" name="accountType">
-                                Starters
+                                @if (Auth::user()->business_address == "investors")
+                                    <input type="radio" name="accountType"> Starters
+                                @else
+                                    <input type="radio" name="accountType" checked> Starters
+                                @endif
                             </label>
                         </div>
                         <input class="infund-button infund-signup-button infund-profile-save" type="button" value="Save Changes">

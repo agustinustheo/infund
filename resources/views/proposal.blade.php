@@ -24,20 +24,27 @@
                     </div>
                 </div>
                 <div>
-                    <div id="infundProposalUploadData">
-                        <label class="infund-signup-label">Title</label>
-                        <div>InFund</div>
-                        <label class="infund-signup-label">Author</label>
-                        <div>Max Jong</div>
-                        <label class="infund-signup-label">Description</label>
-                        <div class="infund-signup-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque ut, consequuntur odio voluptatum pariatur culpa et eaque sed quas possimus suscipit expedita accusantium facilis error, animi ratione fuga nam dignissimos.</div>
-                        <label class="infund-signup-label">Funds Needed</label>
-                        <div>Rp. 15.000.000,-</div>
-                        <div class="infund-signup-buttons">
-                            <div class="infund-button">Cancel</div>
-                            <div class="infund-button">Confirm</div>
+                    <form method="POST" action="{{url('/proposal-store')}}">
+                        @csrf
+                        <div id="infundProposalUploadData">
+                            <label class="infund-signup-label">Title</label>
+                            <div>{{$title}}</div>
+                            <input type="hidden" value={{$title_hid}} name="title">
+                            <label class="infund-signup-label">Author</label>
+                            <div>{{Auth::user()->name}}</div>
+                            <label class="infund-signup-label">Description</label>
+                            <div class="infund-signup-desc">{{$desc}}</div>
+                            <input type="hidden" value={{$desc_hid}} name="desc">
+                            <label class="infund-signup-label">Funds Needed</label>
+                            <div>{{$fund}}</div>
+                            <input type="hidden" value={{$fund}} name="fund">
+                            <input type="hidden" value={{$filename}} name="filename">
+                            <div class="infund-signup-buttons">
+                                <div class="infund-button"><a href="{{url('/dashboard')}}">Cancel</a></div>
+                                <input type="submit" class="infund-button" value="Confirm" style="border:none;"></input>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </main>

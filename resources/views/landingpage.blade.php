@@ -6,6 +6,7 @@
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     </head>
     <body>
@@ -119,9 +120,11 @@
                 <div style="text-align: center">
                     <input type="text" placeholder="Enter email.." style="width: 250px; height: 32px; padding-left: 10px; border-radius: 10px; border: 0; outline: none;">
                 </div>
-                <div class="infund-button infund-signin-form-show">
-                    Start Now
-                </div>
+                @if (!Auth::check())
+                    <div class="infund-button infund-signin-form-show">
+                        Start Now
+                    </div>
+                @endif
             </div>
         </footer>
 

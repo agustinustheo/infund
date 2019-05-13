@@ -27,4 +27,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token', 'bank_name', 'bank_account_number',
     ];
+
+    public function proposal(){
+        return $this->hasMany('App\Proposal');
+    }
 }

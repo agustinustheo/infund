@@ -23,6 +23,8 @@ Route::get('/viewall', function () {
     return view('viewall');
 });
 
+Route::get('/view/{user_id}/{prop_title}', 'ProposalController@viewProposal');
+
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
@@ -30,15 +32,15 @@ Route::get('/viewall', function () {
 Route::get('signin', [
     'as' => 'login',
     'uses' => 'Auth\LoginController@showLoginForm'
-  ]);
-  Route::post('signin', [
+]);
+Route::post('signin', [
     'as' => '',
     'uses' => 'Auth\LoginController@login'
-  ]);
-  Route::get('logout', [
+]);
+Route::get('logout', [
     'as' => 'logout',
     'uses' => 'Auth\LoginController@logout'
-  ]);
+]);
   
   // Password Reset Routes
 //   Route::post('password/email', [
@@ -58,15 +60,15 @@ Route::get('signin', [
 //     'uses' => 'Auth\ResetPasswordController@showResetForm'
 //   ]);
   
-  // Registration Routes
-  Route::get('signup', [
+    // Registration Routes
+Route::get('signup', [
     'as' => 'register',
     'uses' => 'Auth\RegisterController@showRegistrationForm'
-  ]);
-  Route::post('signup', [
+]);
+Route::post('signup', [
     'as' => '',
     'uses' => 'Auth\RegisterController@register'
-  ]);
+]);
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/dashboard', function () {
@@ -81,13 +83,11 @@ Route::group(['middleware' => ['auth']], function() {
         return view('settings');
     });
 
-    Route::get('/proposal', function () {
-        return view('proposal');
-    });
+    Route::post('/proposal', 'ProposalController@proposalConfirm');
 
-    Route::get('/upload', function () {
-        return view('uploadproposal');
-    });
+    Route::post('/upload','ProposalController@proposalUpload');
+
+    Route::post('/proposal-store', 'ProposalController@proposalStore');
 
     Route::get('/reset', function () {
         return view('reset');
