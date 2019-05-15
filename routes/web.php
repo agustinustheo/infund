@@ -83,6 +83,10 @@ Route::group(['middleware' => ['auth']], function() {
         return view('settings');
     });
 
+    Route::post('/settings', 'UserController@updateData');
+
+    Route::post('/settings-profile', 'UserController@updateProfilePicture');
+
     Route::post('/proposal', 'ProposalController@proposalConfirm');
 
     Route::post('/upload','ProposalController@proposalUpload');

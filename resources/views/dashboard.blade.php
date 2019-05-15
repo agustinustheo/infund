@@ -83,7 +83,7 @@
                         <span>You Haven't Uploaded a Proposal Yet!</span>
                     @endif
                     @foreach (Auth::user()->proposal as $proposal)
-                        <div class="infund-proposal-card">
+                        <div class="infund-proposal-card" style="background-image: url('/img/web_assets/thumbnail.png');background-size:cover;background-position:center;">
                             <span>
                                 <h2>{{$proposal->title}}</h2>
                                 <span>{{$proposal->description}}</span>
@@ -114,7 +114,7 @@
                         <span>You Haven't Uploaded a Proposal Yet!</span>
                     @endif
                     @foreach (Auth::user()->proposal->sortByDesc('views') as $proposal)
-                        <div class="infund-proposal-card">
+                        <div class="infund-proposal-card" style="background-image: url('/img/web_assets/thumbnail.png');background-size:cover;background-position:center;">
                             <span>
                                 <h2>{{$proposal->title}}</h2>
                                 <span>{{$proposal->description}}</span>

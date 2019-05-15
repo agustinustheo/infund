@@ -36,7 +36,7 @@ class ProposalController extends Controller
         $proposal = new Proposal;
         $proposal->user_id = Auth::user()->id;
         $proposal->title = str_replace("-"," ",$request->title);
-        $proposal->description = str_replace("-"," ",$request->title);
+        $proposal->description = str_replace("-"," ",$request->desc);
         $proposal->funds = $request->fund;
         $proposal->views = 0;
         $proposal->filename = $request->filename;
