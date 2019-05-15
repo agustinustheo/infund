@@ -1126,3 +1126,7 @@ nav.infund-landing-scroll-nav.infund-nav > .infund-nav-item-container > *:nth-la
         justify-content: center;
     }
 }
+.infund-how-to-card > div,
+.infund-how-to-card > div > i{
+    overflow: hidden;
+}
