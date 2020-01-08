@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Redirect;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -46,27 +47,6 @@ class RegisterController extends Controller
         return view('signup');
     }
 
-    public function register(Request $request){
-        //dd($request->accountType);
-        $user = new User;
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->bank_name = $request->bank_name;
-        $user->bank_account_number = $request->bank_account_number;
-        $user->dob = $request->dob;
-        $user->home_address = $request->home_address;
-        $user->business_address = $request->business_address;
-        $user->account_type = $request->accountType;
-        $user->password = bcrypt($request->password);
-        if(Input::hasFile('profile_picture')){
-            $file = Input::file('profile_picture');
-            $filename = str_random(5)."_".$user->name.".".$file->getClientOriginalExtension();
-            $file->move('img/profile_pictures', $filename);
-            $user->profile_picture = $filename;
-        }
-        $user->save();
-        return redirect("/");
-    }
     /**
      * Get a validator for an incoming registration request.
      *
@@ -79,21 +59,41 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'bank_name' => ['required', 'string'],
+            'bank_account_number' => ['required', 'string'],
+            'dob' => ['required', 'date'],
+            'home_address' => ['required', 'string'],
+            'business_address' => ['required', 'string'],
+            'account_type' => ['required', 'string'],
+            'profile_picture' => ['required'],
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+    public function register(Request $request){
+        $data = $request->all();
+        $validation = $this->validator($data);
+        if($validation->fails()) {
+            return Redirect::back()->withErrors($validation);
+        }
+        else{
+            $user = new User;
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->bank_name = $request->bank_name;
+            $user->bank_account_number = $request->bank_account_number;
+            $user->dob = $request->dob;
+            $user->home_address = $request->home_address;
+            $user->business_address = $request->business_address;
+            $user->account_type = $request->accountType;
+            $user->password = bcrypt($request->password);
+            if(Input::hasFile('profile_picture')){
+                $file = Input::file('profile_picture');
+                $filename = str_random(5)."_".$user->name.".".$file->getClientOriginalExtension();
+                $file->move('img/profile_pictures', $filename);
+                $user->profile_picture = $filename;
+            }
+            $user->save();
+        }
+        return redirect("/");
     }
 }

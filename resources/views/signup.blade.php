@@ -165,6 +165,13 @@
                 signUpProgressBar[count].getElementsByClassName('infund-signup-progress-bar-full')[0].style.width = "0%";
                 $('#signUpForm').css("transform", "translateX(" + (count - 1) * 20 * -1 + "%)");
             });
+            let signUpForm = document.getElementById('signUpForm');
+            signUpForm.onsubmit = function(e){
+                e.preventDefault();
+                if(count==5){
+                    this.submit();
+                }
+            }
         });
     </script>
 </html>

@@ -18,7 +18,7 @@
                 @if (Auth::check())
                     <a href="{{url('logout')}}">Logout</a>
                 @else
-                    <a href="{{url('signin')}}">Sign In</a>
+                    <a class="infund-signin-form-show">Sign In</a>
                     <a href="{{url('signup')}}">Sign Up</a>
                 @endif
             </div>
@@ -33,7 +33,7 @@
                     @if (Auth::check())
                         <a href="{{url('logout')}}">Logout</a>
                     @else
-                        <a class="infund-signin-form-show" href="{{url('signin')}}">Sign In</a>
+                        <a class="infund-signin-form-show">Sign In</a>
                         <a href="{{url('signup')}}">Sign Up</a>
                     @endif
                 </div>
@@ -118,7 +118,7 @@
                     <i>The biggest failure you can do is not trying</i>
                 </div>
                 <div style="text-align: center">
-                    <input type="text" placeholder="Enter email.." style="width: 250px; height: 32px; padding-left: 10px; border-radius: 10px; border: 0; outline: none;">
+                    <input id="emailInPage" type="text" placeholder="Enter email.." style="width: 250px; height: 32px; padding-left: 10px; border-radius: 10px; border: 0; outline: none;">
                 </div>
                 @if (!Auth::check())
                     <div class="infund-button infund-signin-form-show">
@@ -134,7 +134,7 @@
                 <h1>Welcome Back!</h1>
                 <div>
                     <label for="email">Email</label>
-                    <input class="infund-signup-textbox" type="text" placeholder="Enter your address.." name="email">
+                    <input id="emailInForm" class="infund-signup-textbox" type="text" placeholder="Enter your address.." name="email">
                 </div>
                 <div>
                     <label for="password">Password</label>
@@ -183,5 +183,10 @@
             else
                 $('#signInForm').fadeOut();
         }); 
+        let emailInForm = document.getElementById('emailInForm');
+        let emailInPage = document.getElementById('emailInPage');
+        emailInPage.onkeyup = function(){
+            emailInForm.value = emailInPage.value;
+        }
     </script>
 </html>
