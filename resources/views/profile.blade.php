@@ -30,54 +30,58 @@
                 <hr>
                 <div class="infund-profile-proposals">
                     <div>
-                        <div class="infund-proposal-card">
+                    @if(count(Auth::user()->proposal)==0)
+                        <span>You Haven't Uploaded a Proposal Yet!</span>
+                    @endif
+                    @foreach (Auth::user()->proposal as $proposal)
+                        <div class="infund-proposal-card" style="background-image: url('/img/web_assets/thumbnail.png');background-size:cover;background-position:center;">
                             <span>
-                                <h2>Title</h2>
-                                <span>brief desc..</span>
-                                <span>100 investor 100 views</span>
+                                <h2>{{$proposal->title}}</h2>
+                                <span>{{$proposal->description}}</span>
+                                <span>0 investor(s) {{$proposal->views}} view(s)</span>
                             </span>
                             <span>
                                 <i class="fas fa-ellipsis-v"></i>
                             </span>
                             <div class="infund-proposal-hover-options">
-                                <a>
+                                <a href="{{url('/view/'.Auth::user()->id.'/'.$proposal->title)}}">
                                     View
                                 </a>
-                                <a>
+                                <!-- <a>
                                     Donate
-                                </a>
-                                <a>
-                                    Blabla
-                                </a>
+                                </a> -->
                             </div>
                         </div>
+                    @endforeach
                     </div>
                 </div>
                 <h2>Recent Proposals</h2>
                 <hr>
                 <div class="infund-profile-proposals">
                     <div>
-                        <div class="infund-proposal-card">
+                    @if(count(Auth::user()->proposal)==0)
+                        <span>You Haven't Uploaded a Proposal Yet!</span>
+                    @endif
+                    @foreach (Auth::user()->proposal as $proposal)
+                        <div class="infund-proposal-card" style="background-image: url('/img/web_assets/thumbnail.png');background-size:cover;background-position:center;">
                             <span>
-                                <h2>Title</h2>
-                                <span>brief desc..</span>
-                                <span>100 investor 100 views</span>
+                                <h2>{{$proposal->title}}</h2>
+                                <span>{{$proposal->description}}</span>
+                                <span>0 investor(s) {{$proposal->views}} view(s)</span>
                             </span>
                             <span>
                                 <i class="fas fa-ellipsis-v"></i>
                             </span>
                             <div class="infund-proposal-hover-options">
-                                <a>
+                                <a href="{{url('/view/'.Auth::user()->id.'/'.$proposal->title)}}">
                                     View
                                 </a>
-                                <a>
+                                <!-- <a>
                                     Donate
-                                </a>
-                                <a>
-                                    Blabla
-                                </a>
+                                </a> -->
                             </div>
                         </div>
+                    @endforeach
                     </div>
                 </div>
             </div>

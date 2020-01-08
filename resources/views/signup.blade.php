@@ -104,11 +104,11 @@
                     <div>
                         <label>Account Type</label>
                         <label for="investorsRadio">
-                            <input type="radio" name="accountType" value="investors">
+                            <input type="radio" name="account_type" value="investors">
                             Investors
                         </label>
                         <label for="startersRadio">
-                            <input type="radio" name="accountType" value="starters">
+                            <input type="radio" name="account_type" value="starters">
                             Starters
                         </label>
                     </div>

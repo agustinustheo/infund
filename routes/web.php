@@ -68,7 +68,11 @@ Route::get('signup', [
 Route::post('signup', [
     'as' => '',
     'uses' => 'Auth\RegisterController@register'
-]);
+]);    
+Route::get('/admin/signin', function () {
+    return view('admin/signin');
+});
+Route::get('/admin/viewall', 'AdminController@viewAll');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/dashboard', function () {

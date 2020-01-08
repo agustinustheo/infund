@@ -22,6 +22,7 @@
             <div class="infund-proposal-form">
                 <div>
                     <div class="infund-proposal-card">
+                        <embed src="{{URL::asset('storage/proposals/'.$filename)}}" type="application/pdf" style="height:100%">
                     </div>
                 </div>
                 <div>

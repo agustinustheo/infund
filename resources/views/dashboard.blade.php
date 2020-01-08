@@ -14,7 +14,7 @@
             <a href="/" class="infund-nav-logo">
                 <img src="{{ URL::asset('img/web_assets/infund-header-logo.png') }}" height="42">
             </a>
-            <form>
+            <form style="display:none;">
                 <input class="infund-signup-textbox infund-dashboard-search" type="text" placeholder="Search..">
                 <i class="fas fa-search"></i>
             </form>
@@ -96,12 +96,9 @@
                                 <a href="{{url('/view/'.Auth::user()->id.'/'.$proposal->title)}}">
                                     View
                                 </a>
-                                <a>
+                                <!-- <a>
                                     Donate
-                                </a>
-                                {{-- <a>
-                                    Blabla
-                                </a> --}}
+                                </a> -->
                             </div>
                         </div>
                     @endforeach
@@ -130,9 +127,6 @@
                                 <a>
                                     Donate
                                 </a>
-                                {{-- <a>
-                                    Blabla
-                                </a> --}}
                             </div>
                         </div>
                     @endforeach

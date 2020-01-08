@@ -58,10 +58,10 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8'],
             'bank_name' => ['required', 'string'],
             'bank_account_number' => ['required', 'string'],
-            'dob' => ['required', 'date'],
+            'dob' => ['required', 'string'],
             'home_address' => ['required', 'string'],
             'business_address' => ['required', 'string'],
             'account_type' => ['required', 'string'],
@@ -84,7 +84,7 @@ class RegisterController extends Controller
             $user->dob = $request->dob;
             $user->home_address = $request->home_address;
             $user->business_address = $request->business_address;
-            $user->account_type = $request->accountType;
+            $user->account_type = $request->account_type;
             $user->password = bcrypt($request->password);
             if(Input::hasFile('profile_picture')){
                 $file = Input::file('profile_picture');
